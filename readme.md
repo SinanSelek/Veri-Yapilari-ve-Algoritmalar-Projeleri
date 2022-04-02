@@ -1,26 +1,24 @@
 
-# Insertion Sort Projesi 
-## [22,27,16,2,18,6]  -> Insertion Sort 
+# Binary Search Tree Projesi 
 
-1. Yukarı verilen dizinin sort türüne göre aşamalarını yazınız.
-	- En düşük sayı olan 2 ile 22 yer değiştirir. [2,27,16,22,18,6]
-	- İkinci en düşük sayı 6 ile 27 yer değiştirir. [2,6,16,22,18,27]
-	- Dördüncü en düşük sayı 18 ile 22 yer değiştirir. [2,6,16,18,22,27]
+## [7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız. 
 
-2. Big-O gösterimini yazınız.
-	* n + (n-1) + (n-2) + ... + 1 = n*(n+1)/2 = (n²+n)/2
-	* Sonuca göre Big-o -> O(n²)'dir.
-3. Time Complexity: Average case: Aradığımız sayının ortada olması,Worst case: Aradığımız sayının sonda olması, Best case: Aradığımız sayının dizinin en başında olması.
-	* Average case : O(n²)
-	* Worst case : O(n²)
-	* Best case : O(n²)
-4. Dizi sıralandıktan sonra 18 sayısı hangi case kapsamına girer? Yazınız.
-	* Aranan sayi dizinin ortasinda olduğu için Average Case olur. 
+- Root olarak dizinin sıralanmış halinin ortalarından bir sayı seçersek daha dengeli bir dağılım olur
+- Root olarak 5 seçelim
+- 7>5 olduğu için 7 5'in sağına eklenir
+- 1>5 olduğu için 1 5'in soluna eklenir 
+- 8>5, 8>7 olduğu için 8 7'nin sağına eklenir
+- 3<5, 3>1 olduğu için 3 1'in sağına eklenir
+- 6>5, 6<7 olduğu için 6 7'nin soluna eklenir
+- 0<5, 0<1 olduğu için 0 1'in soluna eklenir
+- 9>5, 9>7, 9>8 olduğu için 9 8'in sağına eklenir
+- 4<5, 4>1, 4>3 olduğu için 4 3'ün sağına eklenir
+- 2<5, 2>1, 2<3 olduğu için 2 3'ün soluna eklenir
 
-## ## [7,3,5,8,2,9,4,15,6] dizisinin Insertion Sort'a göre ilk 4 adımını yazınız
-	1. 2 ile 7 yer değiştirir -> [2,3,5,8,7,9,4,15,6]
-	2. 3 sabit kalır -> [2,3,5,8,7,9,4,15,6]
-	3. 4 ile 5 yer değiştirir -> [2,3,4,8,7,9,5,15,6]
-	4. 5 ile 8 yer değiştirir -> [2,3,4,5,7,9,8,15,6]
-	
- 
+                5
+			 /     \
+		   1         7 
+		 /   \     /   \
+		0    3    6     8
+		   /   \         \
+		  2     4         9
