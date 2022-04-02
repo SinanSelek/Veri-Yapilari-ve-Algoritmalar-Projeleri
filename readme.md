@@ -15,7 +15,7 @@
 - 4<5, 4>1, 4>3 olduğu için 4 3'ün sağına eklenir
 - 2<5, 2>1, 2<3 olduğu için 2 3'ün soluna eklenir
 
-                5
+                 5
 			  /   \
 		     1       7 
 		  /   \     /  \
